@@ -1,0 +1,137 @@
+/* fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap");
+
+/* all format */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* style */
+body {
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+  padding: clamp(20px, 5vw, 50px) 10px 10px;
+}
+
+/* taille du containerx */
+.container {
+  max-width: 800px;
+  background-color: #36b8dc;
+  border-radius: 5px;
+  border: 1px solid grey;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-weight: 400;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+/* style des inputs */
+.input-container {
+  display: flex;
+  justify-content: center;
+}
+
+.input-group:nth-child(2) {
+  margin-left: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin: 0 0 5px 10px;
+  font-weight: 400;
+}
+
+.input-group input {
+  margin: 0 10px 0 0;
+  width: 300px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #247d59;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.input-group input:focus {
+  outline: 1px solid #247d59;
+}
+
+/* taille du form */
+form button {
+  display: block;
+  min-width: 200px;
+  border: none;
+  padding: 10px;
+  margin: 40px auto;
+  border-radius: 10px;
+  background-color: rgb(0, 217, 255);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: rgba(0, 217, 255, 0.75);
+}
+
+/* partie résultat */
+.result {
+  margin: 10px;
+  text-align: center;
+}
+
+.result #result {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+  .container {
+    max-width: 600px;
+  }
+  .input-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-group:nth-child(2) {
+    margin-top: 30px;
+    margin-left: 0px;
+  }
+  .input-group input {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .input-group {
+    width: 100%;
+  }
+
+  .input-group input {
+    width: 100%;
+    min-width: auto;
+  }
+
+  form button {
+    width: 100%;
+    min-width: auto;
+  }
+}
